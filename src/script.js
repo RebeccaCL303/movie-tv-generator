@@ -8,7 +8,12 @@ const description = document.querySelector(".description");
 const form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
 
+function test(response) {
+ console.log(response);
+}
+
 function handleSubmit(event) {
  event.preventDefault();
  description.innerHTML = "Loading...";
+ axios.get(url).then(test);
 }
