@@ -7,70 +7,74 @@
   <link href="./src/styles.css" rel="stylesheet" />
  </head>
  <body>
-  <header>
-   <h1>📺 AI Movie / TV Show Generator 📺</h1>
-   <h3>
-    Not sure what to watch? Enter your preferences for a movie or show, and let
-    our AI find something for you!
-   </h3>
-  </header>
-  <main>
-   <form>
-    <label for="media-type"
-     >Movie or TV Show?
-     <select id="media-type" required>
-      <option>select one</option>
-      <option value="tv">TV Show</option>
-      <option value="movie">Movie</option>
-     </select>
-    </label>
+  <div class="container">
+   <header>
+    <h1>📺 AI Movie / TV Show Generator 📺</h1>
+    <h3>
+     Not sure what to watch? Enter your preferences for a movie or show, and let
+     our AI find something for you!
+    </h3>
+   </header>
+   <main>
+    <form>
+     <label for="media-type"
+      >Media Type:
+      <select id="media-type" required>
+       <option>select one</option>
+       <option value="tv">TV Show</option>
+       <option value="movie">Movie</option>
+      </select>
+     </label>
 
-    <label for="genre"
-     >Genre:
-     <select id="genre">
-      <option>no preference</option>
-      <option value="action">Action / Adventure</option>
-      <option value="animation">Animation</option>
-      <option value="comedy">Comedy</option>
-      <option value="drama">Drama</option>
-      <option value="fantasy">Fantasy</option>
-      <option value="horror">Horror</option>
-      <option value="mystery">Mystery</option>
-      <option value="sci-fi">Science Fiction</option>
-      <option value="thriller">Thriller</option>
-     </select>
-    </label>
+     <label for="genre"
+      >Genre:
+      <select id="genre">
+       <option>no preference</option>
+       <option value="action">Action / Adventure</option>
+       <option value="animation">Animation</option>
+       <option value="comedy">Comedy</option>
+       <option value="drama">Drama</option>
+       <option value="fantasy">Fantasy</option>
+       <option value="horror">Horror</option>
+       <option value="mystery">Mystery</option>
+       <option value="sci-fi">Science Fiction</option>
+       <option value="thriller">Thriller</option>
+      </select>
+     </label>
 
-    <label for="rating">
-     Rating:
-     <select id="rating">
-      <option>no preference</option>
-      <option value="g">G</option>
-      <option value="pg">PG</option>
-      <option value="pg-13">PG-13</option>
-      <option value="r">R</option>
-     </select>
-    </label>
-    <label for="extra"
-     >Any other preferences?
-     <textarea id="extra"></textarea>
-    </label>
-   </form>
-   <section>
-    <div class="description"></div>
-    <div class="image"></div>
-   </section>
-  </main>
-  <footer>
-   This project is
-   <a href="https://github.com/RebeccaCL303/movie-tv-generator" target="_blank"
-    >open source</a
-   >
-   by
-   <a href="https://rebeccacl303.github.io" target="_blank"
-    >Rebecca Leibowitz</a
-   >
-  </footer>
+     <label for="rating">
+      Rating:
+      <select id="rating">
+       <option>no preference</option>
+       <option value="g">G</option>
+       <option value="pg">PG</option>
+       <option value="pg-13">PG-13</option>
+       <option value="r">R</option>
+      </select>
+     </label>
+     <label for="extra"
+      >Any other preferences?
+      <textarea id="extra"></textarea>
+     </label>
+
+     <input id="submit" type="submit" />
+    </form>
+    <section>
+     <div class="description"></div>
+     <div class="image"></div>
+    </section>
+   </main>
+   <footer>
+    This project is
+    <a href="https://github.com/RebeccaCL303/movie-tv-generator" target="_blank"
+     >open source</a
+    >
+    by
+    <a href="https://rebeccacl303.github.io" target="_blank"
+     >Rebecca Leibowitz</a
+    >
+   </footer>
+  </div>
   <script src="./src/script.js"></script>
  </body>
 </html>
