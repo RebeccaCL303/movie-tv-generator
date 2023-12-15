@@ -12,7 +12,7 @@ const mediaElement = document.querySelector("#media-type");
 const genreElement = document.querySelector("#genre");
 const ratingElement = document.querySelector("#rating");
 const extraElement = document.querySelector("#extra");
-const description = document.querySelector(".description");
+const responseElement = document.querySelector("#response");
 
 // handle input change
 
@@ -34,15 +34,17 @@ extraElement.addEventListener("change", handleChange);
 
 function handleSubmit(event) {
  event.preventDefault();
+ responseElement.classList.remove("hidden");
+ responseElement.classList.add("display");
  description.innerHTML = "Loading...";
  const url = `https://api.shecodes.io/ai/v1/generate?prompt=${input}&context=${context}&key=${key}`;
- axios.get(url).then(test);
+ axios.get(url).then(showResponse);
 }
 
 form.addEventListener("submit", handleSubmit);
 
 // response
 
-function test(response) {
- console.log(response);
+function showResponse(response) {
+ description.innerHTML = response.data.answer.trim("/");
 }
