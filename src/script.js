@@ -36,7 +36,12 @@ function handleSubmit(event) {
  event.preventDefault();
  responseElement.classList.remove("hidden");
  responseElement.classList.add("display");
- description.innerHTML = "Loading...";
+ new Typewriter("#description", {
+  strings: "Loading...",
+  autoStart: true,
+  delay: 10,
+  cursor: "",
+ });
  const url = `https://api.shecodes.io/ai/v1/generate?prompt=${input}&context=${context}&key=${key}`;
  axios.get(url).then(showResponse);
 }
@@ -46,5 +51,10 @@ form.addEventListener("submit", handleSubmit);
 // response
 
 function showResponse(response) {
- description.innerHTML = response.data.answer.trim("/");
+ new Typewriter("#description", {
+  strings: response.data.answer.trim("/"),
+  autoStart: true,
+  delay: 10,
+  cursor: "",
+ });
 }
