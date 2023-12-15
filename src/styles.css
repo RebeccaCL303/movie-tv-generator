@@ -1,6 +1,6 @@
 :root {
- --light-accent: #cb112d;
- --dark-accent: #710112;
+ --light-accent: #ff00ff;
+ --dark-accent: #bf00ff;
 }
 
 * {
@@ -9,25 +9,46 @@
 
 body {
  font-family: sans-serif;
- background-color: #181a1b;
+ background-image: url("./images/neon-grid.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
  color: whitesmoke;
  padding: 50px;
+}
+
+* {
+ scroll-behavior: smooth;
 }
 
 *:not(h1) {
  font-size: 1.1rem;
 }
 
+h1 {
+ font-size: 1.9rem;
+}
+
+h4 {
+ text-align: center;
+ font-size: 1.3rem;
+ margin-top: 0;
+}
+
 section {
+ background-color: rgba(0, 0, 0, 0.6);
  max-width: 1000px;
  margin: auto;
- background-color: rgba(0, 0, 0, 0.3);
  padding: 2rem 0;
- border-radius: 10%;
+ border-radius: 60px;
+}
+
+#response {
+ font-size: 1.2rem;
+ border: 3px double var(--light-accent);
 }
 
 #description {
- margin: 2rem;
+ margin: 0 5%;
 }
 
 .hidden {
@@ -64,10 +85,20 @@ textarea {
 
 footer {
  margin-top: 5rem;
+ position: relative;
+ top: 3rem;
 }
 
 footer a {
  color: var(--light-accent);
+}
+
+footer p {
+ border-radius: 60px;
+ padding: 0.5rem;
+ background-color: rgba(0, 0, 0, 0.6);
+ max-width: fit-content;
+ margin: 0 auto 0.5rem;
 }
 /* form */
 
@@ -102,20 +133,19 @@ textarea {
 }
 
 #submit {
- margin: 2rem auto;
+ margin: 1rem auto 0;
  display: block;
  letter-spacing: 0.5px;
  padding: 0.5rem 2rem;
  border-radius: 10px;
- background-color: var(--light-accent);
- color: whitesmoke;
+ background-color: var(--dark-accent);
  font-weight: 600;
  border: none;
  transition: 200ms all ease-in-out;
+ color: black;
 }
 
 #submit:hover {
- color: black;
- background-color: whitesmoke;
+ background-color: var(--light-accent);
  cursor: pointer;
 }

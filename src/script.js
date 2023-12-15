@@ -36,6 +36,7 @@ function handleSubmit(event) {
  event.preventDefault();
  responseElement.classList.remove("hidden");
  responseElement.classList.add("display");
+ responseElement.scrollIntoView();
  new Typewriter("#description", {
   strings: "Loading...",
   autoStart: true,
