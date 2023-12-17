@@ -68,6 +68,11 @@ footer {
  text-align: center;
 }
 
+header p {
+ font-size: 0.9rem;
+ opacity: 0.8;
+}
+
 h1 {
  color: var(--light-accent);
  font-family: monospace;
@@ -75,12 +80,6 @@ h1 {
 
 h3 {
  font-weight: 500;
-}
-
-h3,
-select,
-textarea {
- opacity: 0.8;
 }
 
 footer {
