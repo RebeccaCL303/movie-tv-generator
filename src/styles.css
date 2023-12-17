@@ -128,7 +128,7 @@ label {
 }
 
 textarea {
- min-height: 20vh;
+ min-height: 40vh;
 }
 
 #submit {
@@ -176,5 +176,13 @@ textarea {
 
  form {
   width: 90%;
+ }
+
+ textarea {
+  font-size: 1rem;
+ }
+
+ header {
+  padding: 0 0.5rem;
  }
 }
