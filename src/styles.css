@@ -138,14 +138,44 @@ textarea {
  letter-spacing: 0.5px;
  padding: 0.5rem 2rem;
  border-radius: 10px;
- background-color: var(--dark-accent);
- font-weight: 600;
- border: none;
+ background-color: whitesmoke;
+ border: 1px solid var(--dark-accent);
  transition: 200ms all ease-in-out;
  color: black;
+ font-family: monospace;
 }
 
 #submit:hover {
- background-color: var(--light-accent);
+ background-color: var(--dark-accent);
  cursor: pointer;
+}
+
+/* responsive styling */
+
+@media (max-width: 900px) {
+ form {
+  width: 80%;
+ }
+}
+
+@media (max-width: 600px) {
+ body {
+  padding: 50px 10px;
+ }
+
+ section {
+  max-width: 95vw;
+ }
+
+ #response {
+  font-size: 1.1rem;
+ }
+
+ #submit {
+  width: 50vw;
+ }
+
+ form {
+  width: 90%;
+ }
 }
