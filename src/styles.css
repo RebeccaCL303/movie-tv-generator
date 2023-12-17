@@ -131,7 +131,8 @@ textarea {
  min-height: 20vh;
 }
 
-#submit {
+#submit,
+#another-one {
  margin: 1rem auto 0;
  display: block;
  letter-spacing: 0.5px;
@@ -144,7 +145,8 @@ textarea {
  font-family: monospace;
 }
 
-#submit:hover {
+#submit:hover,
+#another-one:hover {
  background-color: var(--dark-accent);
  cursor: pointer;
 }

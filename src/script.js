@@ -13,6 +13,7 @@ const genreElement = document.querySelector("#genre");
 const ratingElement = document.querySelector("#rating");
 const extraElement = document.querySelector("#extra");
 const responseElement = document.querySelector("#response");
+const anotherOneElement = document.querySelector("#another-one");
 
 // handle input change
 
@@ -48,6 +49,23 @@ function handleSubmit(event) {
 }
 
 form.addEventListener("submit", handleSubmit);
+
+function getAnother(event) {
+ event.preventDefault();
+ new Typewriter("#description", {
+  strings: "Loading...",
+  autoStart: true,
+  delay: 10,
+  cursor: "",
+ });
+
+ input = `Thank you for the recommendation. Can you provide me with a different ${rating} ${genre} ${mediaType} to watch that is similar to the one you previously recommended?  Please limit the answer to one item, and provide a brief spoiler free summary of the ${mediaType}`;
+ const url = `https://api.shecodes.io/ai/v1/generate?prompt=${input}&context=${context}&key=${key}`;
+
+ axios.get(url).then(showResponse);
+}
+
+anotherOneElement.addEventListener("click", getAnother);
 
 // response
 
